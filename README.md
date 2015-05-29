@@ -9,6 +9,7 @@ Demo app for GOTO Amsterdam 2015
 3. `npm install -g http-server`
 4. `npm install reactify`
 5. `npm install react`
+6. `npm install jquery`
 
 ## Build JS
 `watchify -t reactify assets/application.js -o public/application.js -v`
