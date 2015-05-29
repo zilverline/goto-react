@@ -1,0 +1,15 @@
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  background-color: #fafafa; }
+
+.introduction {
+  text-align: center;
+  font-size: 22px; }
+  .introduction p {
+    font-style: italic;
+    color: #666666; }
+  .introduction h1 {
+    font-size: 82px; }
+
+/*# sourceMappingURL=application.css.map */
