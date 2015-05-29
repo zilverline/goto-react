@@ -18,4 +18,4 @@ Demo app for GOTO Amsterdam 2015
 `sass --watch assets/application.sass:public/application.css`
 
 ## Run server
-`http-server`
+`http-server -P https://kaiwa.io`
