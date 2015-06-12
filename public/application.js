@@ -40,8 +40,34 @@ module.exports = React.createClass({displayName: "exports",
 var React = require("react");
 
 module.exports = React.createClass({displayName: "exports",
+  getInitialState: function() {
+    return {
+      open: false
+    }
+  },
+
   render: function() {
-    return React.createElement("div", {dangerouslySetInnerHTML: {__html: this.props.message.content_formatted}})
+    return (
+      React.createElement("div", {className: "message", onClick: this.handleClick}, 
+        React.createElement("img", {src: this.props.message.user.avatar_url_large}), 
+        React.createElement("h1", null, this.props.message.user.full_name), 
+        React.createElement("div", {dangerouslySetInnerHTML: {__html: this.props.message.content_formatted}}), 
+        this.renderMetaData()
+      )
+    )
+  },
+
+  renderMetaData: function() {
+    if (this.state.open) {
+      var dateString = new Date(this.props.message.posted_at).toString()
+      return React.createElement("div", {className: "timestamp"}, dateString)
+    }
+  },
+
+  handleClick: function(e) {
+    e.preventDefault();
+
+    this.setState({open: !this.state.open});
   }
 })
 
